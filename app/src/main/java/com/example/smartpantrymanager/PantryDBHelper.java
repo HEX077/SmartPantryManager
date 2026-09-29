@@ -1,5 +1,6 @@
 package com.example.smartpantrymanager;
 
+package com.example.smartpantrymanager;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -61,7 +62,7 @@ public class PantryDBHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("recipe_id", recipeId);
         values.put("name", name);
-        values.put("normalised_name", name.toLowerCase().trim());
+        values.put("normalised_name", IngredientNormaliser.normaliseName(name));
         values.put("quantity", quantity);
         values.put("unit", unit);
         db.insert("recipe_ingredients", null, values);
@@ -270,3 +271,4 @@ public class PantryDBHelper extends SQLiteOpenHelper {
         addIngredient(db, id, "pretzel knots", 22, "g");
     }
 }
+
