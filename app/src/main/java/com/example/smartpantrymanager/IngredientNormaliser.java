@@ -69,4 +69,3 @@ public class IngredientNormaliser {
         return quantity;
     }
 }
-
