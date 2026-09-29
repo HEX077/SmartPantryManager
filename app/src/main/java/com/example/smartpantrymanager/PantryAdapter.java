@@ -138,4 +138,3 @@ public class PantryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 }
-
