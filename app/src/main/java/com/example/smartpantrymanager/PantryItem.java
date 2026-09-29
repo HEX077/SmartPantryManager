@@ -1,6 +1,5 @@
 package com.example.smartpantrymanager;
 
-
 import java.util.Calendar;
 
 public class PantryItem {
@@ -66,4 +65,3 @@ public class PantryItem {
         return String.valueOf(quantity);
     }
 }
-
