@@ -1,7 +1,5 @@
 package com.example.smartpantrymanager;
 
-package com.example.smartpantrymanager;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -271,4 +269,3 @@ public class PantryDBHelper extends SQLiteOpenHelper {
         addIngredient(db, id, "pretzel knots", 22, "g");
     }
 }
-
