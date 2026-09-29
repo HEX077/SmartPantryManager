@@ -7,4 +7,87 @@
     android:layout_height="match_parent"
     tools:context=".PantryListActivity">
 
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete" />
+
+        <Button
+            android:id="@+id/buttonAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPantry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/textEmptyPantry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="Your pantry is empty. Tap New to add an ingredient."
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonPantry"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:contentDescription="Pantry"
+            android:src="@drawable/pantrylisticon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonRecipes"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:contentDescription="Recipes"
+            android:src="@drawable/recipesicon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSettings"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:contentDescription="Settings"
+            android:src="@drawable/settingsicon" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
