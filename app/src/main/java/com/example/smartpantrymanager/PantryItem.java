@@ -1,6 +1,5 @@
 package com.example.smartpantrymanager;
 
-package com.example.smartpantrymanager;
 
 import java.util.Calendar;
 
